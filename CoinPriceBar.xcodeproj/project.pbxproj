@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D604590B1FE02BAE00A53DAA /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604590A1FE02BAE00A53DAA /* Money.swift */; };
+		D604590D1FE02CC700A53DAA /* CoinPriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604590C1FE02CC700A53DAA /* CoinPriceProvider.swift */; };
+		D604590F1FE02E2100A53DAA /* CoinbasePriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604590E1FE02E2100A53DAA /* CoinbasePriceProvider.swift */; };
+		D60459111FE02E9000A53DAA /* CoinPriceTouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60459101FE02E9000A53DAA /* CoinPriceTouchBarController.swift */; };
+		D60459131FE03C8800A53DAA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60459121FE03C8800A53DAA /* main.swift */; };
 		D64FDCF91FDF9FD30048E2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */; };
 		D64FDCFB1FDF9FD30048E2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */; };
-		D64FDCFE1FDF9FD30048E2FC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64FDCFC1FDF9FD30048E2FC /* MainMenu.xib */; };
+		D66A00EA1FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */; };
+		D66A00EC1FDFC25100EF4F9D /* CoinPriceTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D604590A1FE02BAE00A53DAA /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		D604590C1FE02CC700A53DAA /* CoinPriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceProvider.swift; sourceTree = "<group>"; };
+		D604590E1FE02E2100A53DAA /* CoinbasePriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinbasePriceProvider.swift; sourceTree = "<group>"; };
+		D60459101FE02E9000A53DAA /* CoinPriceTouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceTouchBarController.swift; sourceTree = "<group>"; };
+		D60459121FE03C8800A53DAA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D64FDCF51FDF9FD30048E2FC /* CoinPriceBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinPriceBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D64FDCFD1FDF9FD30048E2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D64FDCFF1FDF9FD30048E2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64FDD001FDF9FD30048E2FC /* CoinPriceBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinPriceBar.entitlements; sourceTree = "<group>"; };
+		D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceTouchBarItem.swift; sourceTree = "<group>"; };
+		D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceTouchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,15 @@
 		D64FDCF71FDF9FD30048E2FC /* CoinPriceBar */ = {
 			isa = PBXGroup;
 			children = (
+				D60459121FE03C8800A53DAA /* main.swift */,
 				D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */,
+				D60459101FE02E9000A53DAA /* CoinPriceTouchBarController.swift */,
+				D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */,
+				D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */,
+				D604590A1FE02BAE00A53DAA /* Money.swift */,
+				D604590C1FE02CC700A53DAA /* CoinPriceProvider.swift */,
+				D604590E1FE02E2100A53DAA /* CoinbasePriceProvider.swift */,
 				D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */,
-				D64FDCFC1FDF9FD30048E2FC /* MainMenu.xib */,
 				D64FDCFF1FDF9FD30048E2FC /* Info.plist */,
 				D64FDD001FDF9FD30048E2FC /* CoinPriceBar.entitlements */,
 			);
@@ -93,6 +111,11 @@
 					D64FDCF41FDF9FD30048E2FC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -120,7 +143,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D64FDCFB1FDF9FD30048E2FC /* Assets.xcassets in Resources */,
-				D64FDCFE1FDF9FD30048E2FC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,22 +153,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D604590F1FE02E2100A53DAA /* CoinbasePriceProvider.swift in Sources */,
+				D604590D1FE02CC700A53DAA /* CoinPriceProvider.swift in Sources */,
+				D60459131FE03C8800A53DAA /* main.swift in Sources */,
 				D64FDCF91FDF9FD30048E2FC /* AppDelegate.swift in Sources */,
+				D66A00EA1FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift in Sources */,
+				D604590B1FE02BAE00A53DAA /* Money.swift in Sources */,
+				D66A00EC1FDFC25100EF4F9D /* CoinPriceTouchBar.swift in Sources */,
+				D60459111FE02E9000A53DAA /* CoinPriceTouchBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D64FDCFC1FDF9FD30048E2FC /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D64FDCFD1FDF9FD30048E2FC /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D64FDD011FDF9FD30048E2FC /* Debug */ = {

@@ -8,20 +8,23 @@
 
 import Cocoa
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-  @IBOutlet weak var window: NSWindow!
+  let window: NSWindow
 
+  let coinPriceTouchBarController: CoinPriceTouchBarController = {
+    let coinbasePriceProvider = CoinbasePriceProvider()
+    let coinPriceTouchBarController = CoinPriceTouchBarController(coinPriceProvider: coinbasePriceProvider)
+    return coinPriceTouchBarController
+  }()
+
+  override init() {
+    window = NSWindow(contentViewController: coinPriceTouchBarController)
+    super.init()
+  }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // Insert code here to initialize your application
+    window.touchBar = coinPriceTouchBarController.touchBar
+    window.makeKeyAndOrderFront(nil)
   }
-
-  func applicationWillTerminate(_ aNotification: Notification) {
-    // Insert code here to tear down your application
-  }
-
-
 }
-
