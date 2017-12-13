@@ -9,3 +9,8 @@ The prices are spot price in USD fetched from [Coinbase API](https://developers.
 ## Why Touch Bar?
 
 I understand the Touch Bar is intended for keyboard extension, not for information displaying. BUT, it's cool 😎. That's why.
+
+## Download
+
+- [Mac](https://github.com/T-Pham/CoinPriceBar/releases/download/1.0/CoinPriceBar.app.zip)
+- [Windows](http://thecatapi.com/api/images/get?format=src&type=gif)
