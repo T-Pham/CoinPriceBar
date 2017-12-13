@@ -1,6 +1,6 @@
 # CoinPriceBar
 
-![Screenshot](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/screenshot1.png?raw=true)
+![Screenshot](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/record.gif?raw=true)
 
 This is my very first experiment with the MacBook Touch Bar as well as MacOS app development.
 
