@@ -14,6 +14,7 @@
 		D60459131FE03C8800A53DAA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60459121FE03C8800A53DAA /* main.swift */; };
 		D64FDCF91FDF9FD30048E2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */; };
 		D64FDCFB1FDF9FD30048E2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */; };
+		D65FE3421FE0BFCB0011B058 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */; };
 		D66A00EA1FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */; };
 		D66A00EC1FDFC25100EF4F9D /* CoinPriceTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,9 @@
 		D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D64FDCFF1FDF9FD30048E2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64FDD001FDF9FD30048E2FC /* CoinPriceBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoinPriceBar.entitlements; sourceTree = "<group>"; };
+		D65FE33C1FE0B9D90011B058 /* TouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
+		D65FE33F1FE0BAF70011B058 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = /System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<absolute>"; };
 		D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceTouchBarItem.swift; sourceTree = "<group>"; };
 		D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPriceTouchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65FE3421FE0BFCB0011B058 /* DFRFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,7 @@
 			children = (
 				D64FDCF71FDF9FD30048E2FC /* CoinPriceBar */,
 				D64FDCF61FDF9FD30048E2FC /* Products */,
+				D65FE3401FE0BFCA0011B058 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +77,21 @@
 				D604590A1FE02BAE00A53DAA /* Money.swift */,
 				D604590C1FE02CC700A53DAA /* CoinPriceProvider.swift */,
 				D604590E1FE02E2100A53DAA /* CoinbasePriceProvider.swift */,
+				D65FE33C1FE0B9D90011B058 /* TouchBar.h */,
+				D65FE33F1FE0BAF70011B058 /* BridgingHeader.h */,
 				D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */,
 				D64FDCFF1FDF9FD30048E2FC /* Info.plist */,
 				D64FDD001FDF9FD30048E2FC /* CoinPriceBar.entitlements */,
 			);
 			path = CoinPriceBar;
+			sourceTree = "<group>";
+		};
+		D65FE3401FE0BFCA0011B058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +296,15 @@
 				CODE_SIGN_ENTITLEMENTS = CoinPriceBar/CoinPriceBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = CoinPriceBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.CoinPriceBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CoinPriceBar/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -295,10 +316,15 @@
 				CODE_SIGN_ENTITLEMENTS = CoinPriceBar/CoinPriceBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = CoinPriceBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.CoinPriceBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CoinPriceBar/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
