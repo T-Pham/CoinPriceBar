@@ -15,6 +15,8 @@ I understand the Touch Bar is intended for keyboard extension, not for informati
 - [Mac](https://github.com/T-Pham/CoinPriceBar/releases/download/1.0/CoinPriceBar.app.zip)
 - [Windows](http://thecatapi.com/api/images/get?format=src&type=gif)
 
+![Download](https://img.shields.io/github/downloads/T-Pham/CoinPriceBar/total.svg?style=flat-square&label=&colorA=000000&colorB=000000)
+
 ## Wanna give me some coins?
 
 - BTC: `1PeYLFYb8qGCiAj7SrDQz5wsph2VjEEEw3`
