@@ -6,8 +6,6 @@
 //  Copyright © 2017 Thanh Pham. All rights reserved.
 //
 
-import Cocoa
-
 struct CoinbasePriceProvider: CoinPriceProvider {
 
   func getPrice(of coin: Coin, in currency: FiatMoney, completion: @escaping (String?) -> Void) {

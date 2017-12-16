@@ -28,20 +28,9 @@ class CoinPriceTouchBar: NSTouchBar {
     }
   }
 
-  let bitCoinItem: CoinPriceTouchBarItem = {
-    let item = CoinPriceTouchBarItem(coin: .BTC)
-    return item
-  }()
-
-  let ethereumItem: CoinPriceTouchBarItem = {
-    let item = CoinPriceTouchBarItem(coin: .ETH)
-    return item
-  }()
-
-  let liteCoinItem: CoinPriceTouchBarItem = {
-    let item = CoinPriceTouchBarItem(coin: .LTC)
-    return item
-  }()
+  let bitCoinItem = CoinPriceTouchBarItem(coin: .BTC)
+  let ethereumItem = CoinPriceTouchBarItem(coin: .ETH)
+  let liteCoinItem = CoinPriceTouchBarItem(coin: .LTC)
 
   override init() {
     super.init()
