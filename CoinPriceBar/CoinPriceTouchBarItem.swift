@@ -10,6 +10,8 @@ import Cocoa
 
 class CoinPriceTouchBarItem: NSTouchBarItem {
 
+  let coin: Coin
+
   var price: String? {
     didSet {
       reloadText()
@@ -26,7 +28,8 @@ class CoinPriceTouchBarItem: NSTouchBarItem {
   }
 
   init(coin: Coin) {
-    super.init(identifier: NSTouchBarItem.Identifier(rawValue: coin.rawValue))
+    self.coin = coin
+    super.init(identifier: NSTouchBarItem.Identifier(rawValue: self.coin.rawValue))
     textField.stringValue = identifier.rawValue
   }
 
@@ -36,7 +39,7 @@ class CoinPriceTouchBarItem: NSTouchBarItem {
 
   func reloadText() {
     if let price = price {
-      textField.stringValue = "\(identifier.rawValue): \(price)"
+      textField.stringValue = "\(coin.unicode()) \(price)"
     }
   }
 }

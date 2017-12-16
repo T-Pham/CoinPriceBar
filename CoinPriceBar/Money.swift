@@ -12,6 +12,14 @@ enum Coin: String {
   case BTC
   case ETH
   case LTC
+
+  func unicode() -> String {
+    switch self {
+    case .BTC: return "₿"
+    case .ETH: return "Ξ"
+    case .LTC: return "Ł"
+    }
+  }
 }
 
 enum FiatMoney: String {

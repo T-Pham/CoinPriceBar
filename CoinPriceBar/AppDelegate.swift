@@ -11,7 +11,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   let window: NSWindow
-  let btcCharacter = "₿"
+  let btcCharacter = Coin.BTC.unicode()
 
   let coinPriceTouchBarController: CoinPriceTouchBarController = {
     let coinbasePriceProvider = CoinbasePriceProvider()
