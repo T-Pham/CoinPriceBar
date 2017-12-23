@@ -15,6 +15,7 @@
 		D64C25561FE5636F001FE894 /* MesTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C25551FE5636F001FE894 /* MesTouchBarItem.swift */; };
 		D64C25581FE5675E001FE894 /* MesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64C25571FE5675E001FE894 /* MesProvider.swift */; };
 		D644A7BD1FEE3B8300C0D87B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644A7BC1FEE3B8300C0D87B /* Data.swift */; };
+		D644A7C11FEE696600C0D87B /* BinancePriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644A7C01FEE696600C0D87B /* BinancePriceProvider.swift */; };
 		D64FDCF91FDF9FD30048E2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */; };
 		D64FDCFB1FDF9FD30048E2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */; };
 		D65FE3421FE0BFCB0011B058 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */; };
@@ -31,6 +32,7 @@
 		D64C25551FE5636F001FE894 /* MesTouchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesTouchBarItem.swift; sourceTree = "<group>"; };
 		D64C25571FE5675E001FE894 /* MesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesProvider.swift; sourceTree = "<group>"; };
 		D644A7BC1FEE3B8300C0D87B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D644A7C01FEE696600C0D87B /* BinancePriceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinancePriceProvider.swift; sourceTree = "<group>"; };
 		D64FDCF51FDF9FD30048E2FC /* CoinPriceBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinPriceBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64FDCF81FDF9FD30048E2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				D604590A1FE02BAE00A53DAA /* Money.swift */,
 				D604590C1FE02CC700A53DAA /* CoinPriceProvider.swift */,
 				D604590E1FE02E2100A53DAA /* CoinbasePriceProvider.swift */,
+				D644A7C01FEE696600C0D87B /* BinancePriceProvider.swift */,
 				D65FE33C1FE0B9D90011B058 /* TouchBar.h */,
 				D65FE33F1FE0BAF70011B058 /* BridgingHeader.h */,
 				D64FDCFA1FDF9FD30048E2FC /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 				D66A00EA1FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift in Sources */,
 				D604590B1FE02BAE00A53DAA /* Money.swift in Sources */,
 				D66A00EC1FDFC25100EF4F9D /* CoinPriceTouchBar.swift in Sources */,
+				D644A7C11FEE696600C0D87B /* BinancePriceProvider.swift in Sources */,
 				D644A7BD1FEE3B8300C0D87B /* Data.swift in Sources */,
 				D60459111FE02E9000A53DAA /* CoinPriceTouchBarController.swift in Sources */,
 			);

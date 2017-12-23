@@ -2,9 +2,21 @@
 
 ![Screenshot](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/screenshot.png?raw=true)
 
-Bitcoin, Bitcoin Cash, Ethereum and Litecoin price on MacBook Touch Bar.
+Cyptocurrency prices on MacBook Touch Bar.
 
-The prices are spot price in USD fetched from [Coinbase API](https://developers.coinbase.com/api/v2#get-spot-price) every 15 seconds.
+Supported cryptocurrencies:
+
+- Bitcoin
+- Bitcoin Cash
+- Ethereum
+- Litecoin
+- Ripple
+
+Prices are in USD and updated every 15 seconds.
+
+Ripple price is calculated by XRP/ETH price from Binance multiplied with ETH price from Coinbase.
+
+Other prices are spot price in USD from Coinbase.
 
 The app runs in background and can be accessed anywhere by tapping the `₿` icon on the Touch Bar Control Strip.
 
@@ -16,7 +28,7 @@ I understand the Touch Bar is intended for keyboard extension, not for informati
 
 ## Download
 
-- [Mac](https://github.com/T-Pham/CoinPriceBar/releases/download/1.1/CoinPriceBar.app.zip)
+- [Mac](https://github.com/T-Pham/CoinPriceBar/releases/download/1.2/CoinPriceBar.app.zip)
 - [Windows](http://thecatapi.com/api/images/get?format=src&type=gif)
 
 ![Download](https://img.shields.io/github/downloads/T-Pham/CoinPriceBar/total.svg?style=flat-square&label=&colorA=000000&colorB=000000)
@@ -28,3 +40,4 @@ I understand the Touch Bar is intended for keyboard extension, not for informati
 - Bitcoin Cash:	`16iirsFfAR4e7dRgnrdNaC1dvcJ8V8UtnG`
 - Ethereum:		`0x1e63d92Ab5bf0c6FD0C96DFc99F6De918530e271`
 - Litecoin:		`LbCXAynLmrainsuwuGW3QrS8dqHMMyfdvg`
+- Ripple:			`rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh`, tag: `100262993`

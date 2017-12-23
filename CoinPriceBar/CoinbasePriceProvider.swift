@@ -17,14 +17,16 @@ struct CoinbasePriceProvider: CoinPriceProvider {
         }
         return
       }
-      if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []), let json = jsonObject as? [String: Any], let data = json["data"] as? [String: Any], let price = data["amount"] as? String {
-        DispatchQueue.main.async {
-          completion(price)
-        }
-      } else {
-        DispatchQueue.main.async {
-          completion(nil)
-        }
+      guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+        let json = jsonObject as? [String: Any], let dataJson = json["data"] as? [String: Any],
+        let price = dataJson["amount"] as? String else {
+          DispatchQueue.main.async {
+            completion(nil)
+          }
+          return
+      }
+      DispatchQueue.main.async {
+        completion(price)
       }
     }.resume()
   }

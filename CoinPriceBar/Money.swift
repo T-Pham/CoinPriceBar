@@ -13,6 +13,24 @@ enum Coin: String {
   case BCH
   case ETH
   case LTC
+  case XRP
+}
+
+enum FiatMoney: String {
+  case USD
+}
+
+extension Coin {
+
+  func priceProvider() -> CoinPriceProvider {
+    switch self {
+    case .XRP: return BinancePriceProvider()
+    default: return CoinbasePriceProvider()
+    }
+  }
+}
+
+extension Coin {
 
   func unicode() -> String {
     switch self {
@@ -20,6 +38,7 @@ enum Coin: String {
     case .BCH: return "₿"
     case .ETH: return "Ξ"
     case .LTC: return "Ł"
+    case .XRP: return "Ʀ"
     }
   }
 
@@ -29,10 +48,7 @@ enum Coin: String {
     case .BCH: return NSColor(displayP3Red: 154 / 255, green: 193 / 255, blue: 98 / 255, alpha: 1)
     case .ETH: return NSColor(displayP3Red: 115 / 255, green: 123 / 255, blue: 182 / 255, alpha: 1)
     case .LTC: return NSColor(displayP3Red: 182 / 255, green: 180 / 255, blue: 182 / 255, alpha: 1)
+    case .XRP: return NSColor(displayP3Red: 62 / 255, green: 139 / 255, blue: 192 / 255, alpha: 1)
     }
   }
-}
-
-enum FiatMoney: String {
-  case USD
 }
