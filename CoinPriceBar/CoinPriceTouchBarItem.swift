@@ -18,7 +18,7 @@ class CoinPriceTouchBarItem: NSTouchBarItem {
     }
   }
 
-  var textField: NSTextField = {
+  private var textField: NSTextField = {
     let textField = NSTextField(labelWithString: "")
     return textField
   }()
@@ -37,9 +37,12 @@ class CoinPriceTouchBarItem: NSTouchBarItem {
     fatalError()
   }
 
-  func reloadText() {
-    if let price = price {
-      textField.stringValue = "\(coin.unicode()) \(price)"
-    }
+  private func reloadText() {
+    guard let price = price else { return }
+    let coinSymbol = coin.unicode()
+    let string = "\(coinSymbol) \(price)"
+    let attributedString = NSMutableAttributedString(string: string)
+    attributedString.addAttribute(.foregroundColor, value: coin.color(), range: (string as NSString).range(of: coinSymbol))
+    textField.attributedStringValue = attributedString
   }
 }

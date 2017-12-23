@@ -10,9 +10,9 @@ import Cocoa
 
 class CoinPriceTouchBarController: NSViewController {
 
-  let priceRefreshInterval: TimeInterval = 15
-  let coinPriceTouchBar = CoinPriceTouchBar()
-  let coinPriceProvider: CoinPriceProvider
+  private let priceRefreshInterval: TimeInterval = 15
+  private let coinPriceTouchBar = CoinPriceTouchBar()
+  private let coinPriceProvider: CoinPriceProvider
 
   init(coinPriceProvider: CoinPriceProvider) {
     self.coinPriceProvider = coinPriceProvider
@@ -33,29 +33,18 @@ class CoinPriceTouchBarController: NSViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    getBTCPrice()
-    getETHPrice()
-    getLTCPrice()
-  }
-
-  @objc func getBTCPrice() {
-    coinPriceProvider.getPrice(of: .BTC, in: .USD) { [unowned self] price in
-      self.coinPriceTouchBar.BTCPrice = price
-      Timer.scheduledTimer(timeInterval: self.priceRefreshInterval, target: self, selector: #selector(CoinPriceTouchBarController.getBTCPrice), userInfo: nil, repeats: false)
+    for coin in supportedCoins {
+      getPrice(of: coin)
     }
   }
 
-  @objc func getETHPrice() {
-    coinPriceProvider.getPrice(of: .ETH, in: .USD) { [unowned self] price in
-      self.coinPriceTouchBar.ETHPrice = price
-      Timer.scheduledTimer(timeInterval: self.priceRefreshInterval, target: self, selector: #selector(CoinPriceTouchBarController.getETHPrice), userInfo: nil, repeats: false)
-    }
-  }
-
-  @objc func getLTCPrice() {
-    coinPriceProvider.getPrice(of: .LTC, in: .USD) { [unowned self] price in
-      self.coinPriceTouchBar.LTCPrice = price
-      Timer.scheduledTimer(timeInterval: self.priceRefreshInterval, target: self, selector: #selector(CoinPriceTouchBarController.getLTCPrice), userInfo: nil, repeats: false)
+  private func getPrice(of coin: Coin) {
+    coinPriceProvider.getPrice(of: coin, in: currency) { [weak self] price in
+      guard let sself = self else { return }
+      sself.coinPriceTouchBar.prices[coin] = price
+      Timer.scheduledTimer(withTimeInterval: sself.priceRefreshInterval, repeats: false) { [weak sself] _ in
+        sself?.getPrice(of: coin)
+      }
     }
   }
 }
