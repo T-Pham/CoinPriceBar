@@ -13,11 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let window: NSWindow
   private let btcCharacter = Coin.BTC.unicode()
 
-  private let coinPriceTouchBarController: CoinPriceTouchBarController = {
-    let coinbasePriceProvider = CoinbasePriceProvider()
-    let coinPriceTouchBarController = CoinPriceTouchBarController(coinPriceProvider: coinbasePriceProvider)
-    return coinPriceTouchBarController
-  }()
+  private let coinPriceTouchBarController = CoinPriceTouchBarController()
 
   override init() {
     window = NSWindow(contentViewController: coinPriceTouchBarController)

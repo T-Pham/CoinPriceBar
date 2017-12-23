@@ -12,10 +12,8 @@ class CoinPriceTouchBarController: NSViewController {
 
   private let priceRefreshInterval: TimeInterval = 15
   private let coinPriceTouchBar = CoinPriceTouchBar()
-  private let coinPriceProvider: CoinPriceProvider
 
-  init(coinPriceProvider: CoinPriceProvider) {
-    self.coinPriceProvider = coinPriceProvider
+  init() {
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -39,7 +37,7 @@ class CoinPriceTouchBarController: NSViewController {
   }
 
   private func getPrice(of coin: Coin) {
-    coinPriceProvider.getPrice(of: coin, in: currency) { [weak self] price in
+    coin.priceProvider().getPrice(of: coin, in: currency) { [weak self] price in
       guard let sself = self else { return }
       sself.coinPriceTouchBar.prices[coin] = price
       Timer.scheduledTimer(withTimeInterval: sself.priceRefreshInterval, repeats: false) { [weak sself] _ in
