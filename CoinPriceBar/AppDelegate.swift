@@ -11,9 +11,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   let window: NSWindow
-  let btcCharacter = Coin.BTC.unicode()
+  private let btcCharacter = Coin.BTC.unicode()
 
-  let coinPriceTouchBarController: CoinPriceTouchBarController = {
+  private let coinPriceTouchBarController: CoinPriceTouchBarController = {
     let coinbasePriceProvider = CoinbasePriceProvider()
     let coinPriceTouchBarController = CoinPriceTouchBarController(coinPriceProvider: coinbasePriceProvider)
     return coinPriceTouchBarController
@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     window.makeKeyAndOrderFront(nil)
   }
 
-  @objc func customTouchBarItemTapped() {
+  @objc private func customTouchBarItemTapped() {
     NSTouchBar.presentSystemModalFunctionBar(coinPriceTouchBarController.touchBar, systemTrayItemIdentifier: btcCharacter)
   }
 }

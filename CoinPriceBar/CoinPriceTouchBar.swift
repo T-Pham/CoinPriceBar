@@ -10,30 +10,14 @@ import Cocoa
 
 class CoinPriceTouchBar: NSTouchBar {
 
-  var BTCPrice: String? {
+  var prices: [Coin: String] = [:] {
     didSet {
-      bitCoinItem.price = BTCPrice
-      mesItem.prices[.BTC] = BTCPrice
+      items.forEach { $0.price = prices[$0.coin] }
+      mesItem.prices = prices
     }
   }
 
-  var ETHPrice: String? {
-    didSet {
-      ethereumItem.price = ETHPrice
-      mesItem.prices[.ETH] = ETHPrice
-    }
-  }
-
-  var LTCPrice: String? {
-    didSet {
-      liteCoinItem.price = LTCPrice
-      mesItem.prices[.LTC] = LTCPrice
-    }
-  }
-
-  let bitCoinItem = CoinPriceTouchBarItem(coin: .BTC)
-  let ethereumItem = CoinPriceTouchBarItem(coin: .ETH)
-  let liteCoinItem = CoinPriceTouchBarItem(coin: .LTC)
+  private var items: [CoinPriceTouchBarItem] = supportedCoins.map { CoinPriceTouchBarItem(coin: $0) }
 
   let mesItem: MesTouchBarItem = {
     let mesProvider = MesProvider()
@@ -43,8 +27,8 @@ class CoinPriceTouchBar: NSTouchBar {
 
   override init() {
     super.init()
-    templateItems = NSSet(objects: bitCoinItem, ethereumItem, liteCoinItem, mesItem) as! Set
-    defaultItemIdentifiers = [.flexibleSpace, bitCoinItem.identifier, .flexibleSpace, ethereumItem.identifier, .flexibleSpace, liteCoinItem.identifier, .flexibleSpace, mesItem.identifier, .fixedSpaceLarge]
+    templateItems = Set(items as [NSTouchBarItem] + [mesItem])
+    defaultItemIdentifiers = [.flexibleSpace] + items.flatMap { [$0.identifier, .flexibleSpace] } + [mesItem.identifier, .fixedSpaceSmall]
   }
 
   required init?(coder aDecoder: NSCoder) {
