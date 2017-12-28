@@ -11,10 +11,11 @@ Supported cryptocurrencies:
 - Ethereum
 - Litecoin
 - Ripple
+- IOTA
 
 Prices are in USD and updated every 15 seconds.
 
-Ripple price is calculated by XRP/ETH price from Binance multiplied with ETH price from Coinbase.
+Ripple and IOTA prices are calculated by XRP/ETH price from Binance multiplied with ETH price from Coinbase.
 
 Other prices are spot price in USD from Coinbase.
 
