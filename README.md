@@ -23,16 +23,18 @@ The app runs in background and can be accessed anywhere by tapping the `₿` ico
 
 ![Screenshot](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/record.gif?raw=true)
 
-## Why Touch Bar?
-
-I understand the Touch Bar is intended for keyboard extension, not for information displaying. BUT, it's cool 😎. That's why.
-
 ## Download
 
 - [Mac](https://github.com/T-Pham/CoinPriceBar/releases/download/1.2/CoinPriceBar.app.zip)
 - [Windows](http://thecatapi.com/api/images/get?format=src&type=gif)
 
 ![Download](https://img.shields.io/github/downloads/T-Pham/CoinPriceBar/total.svg?style=flat-square&label=&colorA=000000&colorB=000000)
+
+## "Please support this coin / this currency"
+
+If you want to add some coin / use some currency other than USD but don't know how to code and build the app yourself, please [open an issue](https://github.com/T-Pham/CoinPriceBar/issues/new).
+
+I will help create a customized app based on your request. I will also make it available for everyone else to download from the [release page](https://github.com/T-Pham/CoinPriceBar/releases).
 
 ## Wanna give me some coins?
 
