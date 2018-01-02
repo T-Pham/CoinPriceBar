@@ -7,4 +7,4 @@
 //
 
 let supportedCoins: [Coin] = [.BTC, .BCH, .ETH, .LTC, .XRP, .IOTA]
-let currency: FiatMoney = .USD
+let currency: FiatMoney = .CZK
