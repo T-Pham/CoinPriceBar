@@ -28,7 +28,7 @@ class CoinPriceTouchBar: NSTouchBar {
   override init() {
     super.init()
     templateItems = Set(items as [NSTouchBarItem] + [mesItem])
-    defaultItemIdentifiers = [.flexibleSpace] + items.flatMap { [$0.identifier, .flexibleSpace] } + [mesItem.identifier, .fixedSpaceSmall]
+    defaultItemIdentifiers = items.flatMap { [$0.identifier, .flexibleSpace] } + [mesItem.identifier]
   }
 
   required init?(coder aDecoder: NSCoder) {
