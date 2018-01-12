@@ -20,7 +20,22 @@
 		D65FE3421FE0BFCB0011B058 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */; };
 		D66A00EA1FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00E91FDFC1C500EF4F9D /* CoinPriceTouchBarItem.swift */; };
 		D66A00EC1FDFC25100EF4F9D /* CoinPriceTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66A00EB1FDFC25100EF4F9D /* CoinPriceTouchBar.swift */; };
+		D6AFF01E2009125A003DA476 /* DFRFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D65FE3411FE0BFCB0011B058 /* DFRFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6AFF01F2009125A003DA476 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6AFF01E2009125A003DA476 /* DFRFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5CD431541FFC8E65005E4C2E /* BittrexPriceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BittrexPriceProvider.swift; sourceTree = "<group>"; };
@@ -113,6 +128,7 @@
 				D64FDCF11FDF9FD30048E2FC /* Sources */,
 				D64FDCF21FDF9FD30048E2FC /* Frameworks */,
 				D64FDCF31FDF9FD30048E2FC /* Resources */,
+				D6AFF01F2009125A003DA476 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +330,7 @@
 				);
 				INFOPLIST_FILE = CoinPriceBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.CoinPriceBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = CoinPriceBar/BridgingHeader.h;
@@ -334,6 +351,7 @@
 				);
 				INFOPLIST_FILE = CoinPriceBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TPM.CoinPriceBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = CoinPriceBar/BridgingHeader.h;
