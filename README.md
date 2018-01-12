@@ -31,18 +31,17 @@ The app runs in background and can be accessed anywhere by tapping the `₿` ico
 
 ![Download](https://img.shields.io/github/downloads/T-Pham/CoinPriceBar/total.svg?style=flat-square&label=&colorA=000000&colorB=000000)
 
+## Quit the app
+
+The app runs in background and has no visible icon on the dock. To quit the app, please use Activity Monitor, search for the CoinPriceBar process and terminate it.
+
 ## "Please support this coin / this currency"
 
+First, have a look at the files [Data.swift](CoinPriceBar/Data.swift) and [Money.swift](CoinPriceBar/Money.swift). The code should be self-explained and you should be able to modify it to fit your needs easily.
+
 If you want to add some coin / use some currency other than USD but don't know how to code and build the app yourself, please [open an issue](https://github.com/T-Pham/CoinPriceBar/issues/new).
+I will show you how to do so or probably help create a customized app based on your request. I will also make it available for everyone else to download from the [release page](https://github.com/T-Pham/CoinPriceBar/releases).
 
-I will help create a customized app based on your request. I will also make it available for everyone else to download from the [release page](https://github.com/T-Pham/CoinPriceBar/releases).
+## License
 
-## Wanna give me some coins?
-
-- Fiat money: [PayPal.Me/pmthanh](https://www.paypal.me/pmthanh)
-- Bitcoin: `1Q1mq13E1phMMYz3wREKRRfYfHU9Gc2v6S`
-- Bitcoin Cash: `16iirsFfAR4e7dRgnrdNaC1dvcJ8V8UtnG`
-- Ethereum: `0x1e63d92Ab5bf0c6FD0C96DFc99F6De918530e271`
-- Litecoin: `LbCXAynLmrainsuwuGW3QrS8dqHMMyfdvg`
-- Ripple: `rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh`, tag: `100262993`
-- Cardano: `DdzFFzCqrhtAfktY6ThCMwgZ8K23fms13NasspwBTvnjcbVrHjRDNR4ZQhD9Tyvz931yefRdR9qihzuLxLeWXSGdGak2qzeHHUXVQJYf`
+CoinPriceBar is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
