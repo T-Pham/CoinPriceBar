@@ -1,6 +1,6 @@
 # CoinPriceBar
 
-![Screenshot](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/screenshot.png?raw=true)
+![Screenshot - from ifun.de](https://github.com/T-Pham/CoinPriceBar/blob/master/Screenshots/screenshot.jpg?raw=true)
 
 Cyptocurrency prices on MacBook Touch Bar.
 
