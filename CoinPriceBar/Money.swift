@@ -16,18 +16,23 @@ enum Coin: String {
   case XRP
   case IOTA
   case ADA
+  case XMR
+  case ZIL
+  case XLM
+  case ARK
 }
 
 enum FiatMoney: String {
   case USD
+  case CAD
 }
 
 extension Coin {
 
   func priceProvider() -> CoinPriceProvider {
     switch self {
-    case .XRP, .IOTA, .ADA: return BinancePriceProvider()
-    default: return CoinbasePriceProvider()
+    case .BTC, .BCH, .ETH, .LTC: return CoinbasePriceProvider()
+    default: return BinancePriceProvider()
     }
   }
 }
@@ -43,6 +48,10 @@ extension Coin {
     case .XRP: return "Ʀ"
     case .IOTA: return "ι"
     case .ADA: return "a̶"
+    case .XMR: return "XMR"
+    case .ZIL: return "ZIL"
+    case .XLM: return "XML"
+    case .ARK: return "ARK"
     }
   }
 
@@ -55,6 +64,7 @@ extension Coin {
     case .XRP: return NSColor(displayP3Red: 62 / 255, green: 139 / 255, blue: 192 / 255, alpha: 1)
     case .IOTA: return NSColor(displayP3Red: 227 / 255, green: 227 / 255, blue: 227 / 255, alpha: 1)
     case .ADA: return NSColor(displayP3Red: 59 / 255, green: 110 / 255, blue: 207 / 255, alpha: 1)
+    default: return .green
     }
   }
 }

@@ -20,6 +20,7 @@ class CoinPriceTouchBarItem: NSTouchBarItem {
 
   private var textField: NSTextField = {
     let textField = NSTextField(labelWithString: "")
+    textField.font = NSFont.systemFont(ofSize: 10)
     return textField
   }()
 
