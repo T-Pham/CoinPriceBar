@@ -37,10 +37,7 @@ The app runs in background and has no visible icon on the dock. To quit the app,
 
 ## "Please support this coin / this currency"
 
-First, have a look at the files [Data.swift](CoinPriceBar/Data.swift) and [Money.swift](CoinPriceBar/Money.swift). The code should be self-explained and you should be able to modify it to fit your needs easily.
-
-If you want to add some coin / use some currency other than USD but don't know how to code and build the app yourself, please [open an issue](https://github.com/T-Pham/CoinPriceBar/issues/new).
-I will show you how to do so or probably help create a customized app based on your request. I will also make it available for everyone else to download from the [release page](https://github.com/T-Pham/CoinPriceBar/releases).
+I don't have much spare time as I used to so I am no longer be able to customize the app for you but it is easy to do that on your own. Have a look at the files [Data.swift](CoinPriceBar/Data.swift) and [Money.swift](CoinPriceBar/Money.swift). The code should be self-explained and you should be able to modify it to fit your needs.
 
 ## License
 
